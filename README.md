@@ -83,11 +83,6 @@ Volunteer:
 3.	Volunteer Benefits: Highlight the benefits of volunteering, such as community impact, skill development, or rewards.
 4.	Testimonials: Include quotes or stories from current or past volunteers to illustrate the positive experiences and outcomes of volunteering with GEI.
 
-References:
-Unsplash. (n.d.). Unsplash: Beautiful, free images and photos. Retrieved [9 August 2024], from https://unsplash.com
-Pixabay. (n.d.). Pixabay: Free images and videos you can use anywhere. Retrieved [9 August 2024], from https://pixabay.com
-Pexels. (n.d.). Pexels: Free stock photos and videos. Retrieved [9 August 2024], from https://www.pexels.com
-Independent Institute of Education. (2024). IIE Module Manual WEDE5020/d/p/w. Retrieved 9 August 2024
 
 
 
