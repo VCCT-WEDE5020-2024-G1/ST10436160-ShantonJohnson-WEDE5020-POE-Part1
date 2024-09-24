@@ -10,6 +10,6 @@ Web Development
 
 WEDE5020 
 
-POE-Part 1
+POE-Part 2
 
-15 August 2024
+26 September 2024
