@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Plant Are You? - Green Earth Initiative</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #004d00; /* Header color */
+            padding: 10px 20px;
+            color: white;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #0077b6;
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+        .question label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Button styles */
+        button {
+            padding: 10px 20px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #023e8a;
+        }
+
+        /* Result styles */
+        .result {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Hide questions by default */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Green Earth Initiative</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/rightSidePanel/volunteer.html">Volunteer</a></li>
+                <li><a href="/rightSidePanel/supportUs.html">Support Us</a></li>
+                <li><a href="/rightSidePanel/quiz.html">Quiz</a></li>
+                <li><a href="/rightSidePanel/feedbackForm.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>What Plant Are You?</h2>
+        <div id="quiz">
+            <div class="question" id="question1">
+                <label>1. What is your ideal weekend activity?</label>
+                <input type="radio" name="q1" value="a"> A. Exploring nature<br>
+                <input type="radio" name="q1" value="b"> B. Reading a book<br>
+                <input type="radio" name="q1" value="c"> C. Going to a party<br>
+                <input type="radio" name="q1" value="d"> D. Gardening<br>
+            </div>
+
+            <div class="question hidden" id="question2">
+                <label>2. How do you handle challenges?</label>
+                <input type="radio" name="q2" value="a"> A. Face them head-on<br>
+                <input type="radio" name="q2" value="b"> B. Analyze and strategize<br>
+                <input type="radio" name="q2" value="c"> C. Seek support from friends<br>
+                <input type="radio" name="q2" value="d"> D. Go with the flow<br>
+            </div>
+
+            <div class="question hidden" id="question3">
+                <label>3. What is your favorite color?</label>
+                <input type="radio" name="q3" value="a"> A. Green<br>
+                <input type="radio" name="q3" value="b"> B. Blue<br>
+                <input type="radio" name="q3" value="c"> C. Red<br>
+                <input type="radio" name="q3" value="d"> D. Yellow<br>
+            </div>
+
+            <button id="nextBtn">Next</button>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        const nextBtn = document.getElementById('nextBtn');
+        const questions = document.querySelectorAll('.question');
+        const resultDiv = document.getElementById('result');
+        let currentQuestion = 0;
+
+        // Function to show the next question
+        nextBtn.addEventListener('click', function() {
+            const currentInputs = questions[currentQuestion].querySelectorAll('input[type="radio"]');
+            let answered = false;
+
+            currentInputs.forEach(input => {
+                if (input.checked) {
+                    answered = true;
+                }
+            });
+
+            if (!answered) {
+                alert('Please select an answer before proceeding.');
+                return;
+            }
+
+            if (currentQuestion < questions.length - 1) {
+                questions[currentQuestion].classList.add('hidden');
+                currentQuestion++;
+                questions[currentQuestion].classList.remove('hidden');
+
+                if (currentQuestion === questions.length - 1) {
+                    nextBtn.textContent = 'Show Result';
+                }
+            } else {
+                showResult();
+            }
+        });
+
+        // Function to calculate and display the result
+        function showResult() {
+            const answers = [
+                document.querySelector('input[name="q1"]:checked'),
+                document.querySelector('input[name="q2"]:checked'),
+                document.querySelector('input[name="q3"]:checked')
+            ];
+
+            let plantType = {};
+            answers.forEach(answer => {
+                if (answer) {
+                    plantType[answer.value] = (plantType[answer.value] || 0) + 1;
+                }
+            });
+
+            let maxType = Object.keys(plantType).reduce((a, b) => plantType[a] > plantType[b] ? a : b);
+
+            let resultText = '';
+            switch(maxType) {
+                case 'a':
+                    resultText = "You are a Fern! You thrive in nature and love exploring the outdoors.";
+                    break;
+                case 'b':
+                    resultText = "You are a Cactus! You're resilient and can handle tough situations with grace.";
+                    break;
+                case 'c':
+                    resultText = "You are a Rose! You bring beauty and joy wherever you go.";
+                    break;
+                case 'd':
+                    resultText = "You are a Sunflower! You radiate positivity and warmth to those around you.";
+                    break;
+            }
+
+            questions[currentQuestion].classList.add('hidden');
+            resultDiv.textContent = resultText;
+            resultDiv.style.display = 'block';
+            nextBtn.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

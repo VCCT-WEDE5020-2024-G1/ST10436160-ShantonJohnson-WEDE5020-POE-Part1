@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form - Green Earth Initiative</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #004d00; /* Adjusted header color */
+            padding: 10px 20px;
+            color: white;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Central container with max width */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #0077b6; /* Same color for headings */
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        /* Input styles */
+        input[type="text"], input[type="email"], textarea {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #0077b6; /* Highlight border on focus */
+        }
+
+        /* Button styles */
+        button {
+            padding: 10px 20px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #023e8a;
+        }
+
+        /* Message styling */
+        .success-message, .error-message {
+            display: none;
+            margin-top: 20px;
+        }
+        .success-message {
+            color: green;
+        }
+        .error-message {
+            color: red;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            button {
+                width: 100%; /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Green Earth Initiative</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/rightSidePanel/volunteer.html">Volunteer</a></li>
+                <li><a href="/rightSidePanel/supportUs.html">Support Us</a></li>
+                <li><a href="/rightSidePanel/quiz.html">Quiz</a></li>
+                <li><a href="/rightSidePanel/feedbackForm.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <p>Your feedback is important to us. Please fill out the form below:</p>
+        
+        <form id="feedbackForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdXx1234567890abcdefg/formResponse" method="POST" target="_self">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="entry.1234567890" placeholder="John Doe" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="entry.0987654321" placeholder="you@example.com" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="entry.1112131415" rows="4" required placeholder="Your feedback..."></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div class="success-message" id="successMessage">Thank you for your feedback!</div>
+        <div class="error-message" id="errorMessage">There was an error submitting your feedback. Please try again.</div>
+    </div>
+
+    <script>
+        const form = document.getElementById('feedbackForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            // Simulate successful submission (replace this with actual form submission logic)
+            const formData = new FormData(form);
+
+            // Display success message
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+            form.reset(); // Optional: Reset the form fields
+        });
+    </script>
+
+</body>
+</html>
