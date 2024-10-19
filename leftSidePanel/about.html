@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth Initiative - About Us</title>
+    <link rel="stylesheet" href="leftSidePanel.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Green Earth Initiative</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/leftSidePanel/about.html">About Us</a></li>
+                <li><a href="/leftSidePanel/ourImapact.html">Our Impact</a></li>
+                <li><a href="/leftSidePanel/latestNews.html">Latest News</a></li>
+                <li><a href="/leftSidePanel/contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="content">
+            <h2>Story & People</h2>
+            <p>
+                The Green Earth Initiative (GEI) began as a grassroots effort to combat climate change and environmental degradation. Since then, we have grown into a nationwide movement, empowering over 50,000 individuals to take action and planting 1 million trees through our hands-on programs. Our diverse team of 100+ environmental experts and dedicated volunteers are united by a shared mission: to protect the planet and create a sustainable future for all.
+            </p>
+
+            <h2>Mission & Impact</h2>
+            <p>
+                Faced with critical environmental threats—like the fact that 80% of natural habitats are at risk—GEI takes direct action through community engagement and education. We have helped reduce local carbon emissions by 30%, diverted 100,000 tons of waste from landfills, and advocated for policies that make sustainability accessible to everyone. By collaborating with 200+ businesses, local governments, and other NGOs, we foster collective efforts to fight climate change and make eco-friendly practices part of everyday life.
+            </p>
+
+            <h2>Looking Forward</h2>
+            <p>
+                GEI's future is bright as we continue to expand our initiatives. In the next five years, we plan to create 20 new urban green spaces and introduce renewable energy solutions to power 10,000 homes sustainably. We are committed to long-term growth, and by 2049, we aim to be a global leader in environmental advocacy, driving innovation and fostering a culture of sustainability in every corner of the world.
+            </p>
+        </div>
+
+        <div class="video">
+            <video src="/about us.mp4" autoplay loop muted></video>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Green Earth Initiative. All rights reserved.</p>
+    </footer>
+
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 100px); /* Adjust height to exclude header and footer */
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto; /* Allow content to scroll within the section if needed */
+            background-color: #f4f4f4; /* Light background color for content area */
+            border-right: 1px solid #ddd; /* Subtle separation from the video section */
+        }
+
+        .video {
+            flex: 0 0 50%; /* Takes up 50% of the main area */
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: #e8e8e8; /* Neutral background color for the video area */
+        }
+
+        .video video {
+            width: 90%;
+            height: 90%;
+            object-fit: cover; /* Ensures the video covers its area without distortion */
+            border: 3px solid #333; /* Frame around the video for emphasis */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow to elevate the video */
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50; /* Darker color for contrast */
+            text-decoration: underline;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #333; /* Darker text for readability */
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+        }
+    </style>
+</body>
+</html>

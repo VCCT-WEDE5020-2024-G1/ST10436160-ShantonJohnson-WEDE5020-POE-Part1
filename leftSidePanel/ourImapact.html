@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth Initiative - About Us</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Green Earth Initiative</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/leftSidePanel/about.html">About Us</a></li>
+                <li><a href="/leftSidePanel/ourImapact.html">Our Impact</a></li>
+                <li><a href="/leftSidePanel/latestNews.html">Latest News</a></li>
+                <li><a href="/leftSidePanel/contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 style="font-size: 50px; text-decoration-line: underline;">Our Impact</h1>
+        <p style="font-size: 20px; "><mark>We are proud of the collective action we have inspired. Here are some of the ways we’ve made a difference:</mark></p>
+        
+        <div class="impact-section">
+          <div class="impact-item">
+            <div class="impact-number">1M</div>
+            <div class="impact-text">Trees Planted</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-number">30%</div>
+            <div class="impact-text">Carbon Emissions Reduced</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-number">100K</div>
+            <div class="impact-text">Tons of Waste Diverted</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-number">50K</div>
+            <div class="impact-text">Volunteers Engaged</div>
+          </div>
+        </div>
+        
+        <button class="join-us-btn">Join Us!</button>
+      </div>
+
+      <style>
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    overflow: hidden; /* Prevent scrolling */
+
+}
+
+/* Header Styles */
+header {
+    background-color: #004d00; /* Dark Green Background */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #1e7b1e; /* Lighter Green on Hover */
+}
+
+nav ul li a:focus {
+    outline: 2px solid #1e7b1e; /* Visible focus state */
+}
+
+.container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      padding:30px;
+    }
+
+
+    .impact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      width: 100%;
+    }
+
+    .impact-item {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .impact-item:hover {
+      transform: scale(1.05);
+    }
+
+    .impact-number {
+      font-size: 3em;
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    .impact-text {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    /* Button styling */
+    .join-us-btn {
+      padding: 15px 30px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 30px;
+    }
+
+    .join-us-btn:hover {
+      background-color: #218838;
+    }
+
+      </style>
+</body>
+</html>
