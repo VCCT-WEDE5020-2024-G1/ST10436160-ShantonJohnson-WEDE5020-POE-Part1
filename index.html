@@ -2,56 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Earth Initiative - Home</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Green Earth Initiative - Take Action for a Sustainable Future</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Green Earth Initiative</h1>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="volunteer.html">Volunteer</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
+    <!-- Sticky Header -->
+    <div class="sticky-header">
+        &copy; 2024 Green Earth Initiative. All rights reserved.
+    </div>
 
-        <section>
-            <h2>Welcome to Green Earth Initiative</h2>
-            <p>At Green Earth Initiative, we are committed to creating a sustainable future through innovative projects and community engagement. Join us in our mission to make a difference.</p>
-            <img src="images/hero-image.jpg" alt="Green Earth Initiative" style="width: 300px; height: auto;" class="hero-image">
-        </section>
-        
-        <section>
-            <h3>Our Mission</h3>
-            <p>Our mission is to promote environmental sustainability through education, community engagement, and advocacy. We aim to empower individuals and communities to make informed decisions that benefit the environment and help combat climate change.</p>
-        </section>
-        
-        <section>
-            <h3>Get Involved</h3>
-            <p>There are many ways to get involved with Green Earth Initiative. Whether you want to volunteer, donate, or participate in our events, your contribution makes a difference.</p>
-            <ul>
-                <li><a href="volunteer.html">Volunteer</a></li>
-                <li><a href="donate.html">Donate</a></li>
-                <li><a href="projects.html">Learn About Our Projects</a></li>
-            </ul>
-        </section>
-        
-        <section>
-            <h3>Latest News</h3>
-            <p>Stay updated with our latest news, events, and updates from Green Earth Initiative. Check back regularly for news on our ongoing projects and impact stories.</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Green Earth Initiative. All rights reserved.</p>
-    </footer>
+    <!-- Main Content Container -->
+    <div class="main-content-container">
+        <div>
+            <h1>Green Earth Initiative</h1>
+            <p>Create a sustainable world for future generations!</p>
+            <button class="btn btn-learn-more" onclick="openSidePanel('leftSidePanel')">Learn More</button>
+            <button class="btn btn-get-involved" onclick="openSidePanel('rightSidePanel')">Join us</button>
+            <p class="scroll-more-text">Scroll down for more</p>
+
+        </div>
+    </div>
+
+    <video class="background-video" src="homepage.mp4" autoplay loop muted poster="fallback-image.jpg"></video>
+
+    <!-- Scroll-Triggered Mission Section -->
+    <section id="mission-section" class="mission-section">
+        <h3>Promoting environmental sustainability through education, community engagement, and advocacy. </h3>
+        <p>Empowering individuals and communities to make informed decisions that benefit the environment and help combat climate change.</p>
+    </section>
+
+     <!-- Section: Our Vision -->
+     <section class="content-section" id="our-vision-section">
+        <h2>Our Vision</h2>
+        <p>Imagine a society in which each person and community takes a proactive role in safeguarding the environment for coming generations.</p>
+    </section>
+
+    <!-- Section: Our Core Values -->
+    <section class="content-section" id="our-values-section">
+        <h2>Our Core Values</h2>
+        <ul>
+            <li><strong>Sustainability:</strong> We prioritize sustainable practices in everything we do.</li>
+            <li><strong>Community Engagement:</strong> We believe in the power of communities to drive change.</li>
+            <li><strong>Transparency:</strong> We operate with openness and accountability in all our actions.</li>
+            <li><strong>Innovation:</strong> We embrace innovative solutions to tackle environmental challenges.</li>
+        </ul>
+    </section>
+
+    <!-- Team Section -->
+    <section class="content-section" id="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="./images/team1.jpeg" alt="Team Member 1">
+                <h3>Emily Carter</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/team2.jpeg" alt="Team Member 2">
+                <h3>James Bennett</h3>
+                <p>Chief Operating Officer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/team3.jpeg" alt="Team Member 3">
+                <h3>Alexander Foster</h3>
+                <p>Environmental Scientist</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section: Our Partners and Collaborators -->
+    <section class="content-section" id="our-partners-section">
+        <h2>Our Partners and Collaborators</h2>
+        <p>We collaborate with various organizations, including:</p>
+        <ul>
+            <li>Environmental NGOs</li>
+            <li>Local Governments</li>
+            <li>Educational Institutions</li>
+            <li>Corporate Sponsors</li>
+        </ul>
+    </section>
+
+<!-- Newsletter Subscription Section -->
+    <!-- Newsletter Subscription Section -->
+    <section class="content-section" id="newsletter-section">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated on our latest initiatives and events by subscribing to our newsletter!</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeCxIdnIx-BxYTDVKiGnalNuQhUrLzyam9er7O8eUaWcSprtA/viewform?embedded=true" width="640" height="523" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+
+<div class="spacer"></div> <!-- Adds space to allow scrolling -->
+
+
+    <!-- Left Side Panel -->
+    <div id="leftSidePanel" class="side-panel">
+        <span class="close-btn" onclick="closeSidePanel('leftSidePanel')">&times;</span>
+        <a href="./leftSidePanel/about.html">About Us</a>
+        <a href="./leftSidePanel/ourImapact.html">Our Impact</a>
+        <a href="./leftSidePanel/latestNews.html">Latest News</a>
+        <a href="./leftSidePanel/contactUs.html">Contact Us</a>
+    </div>
+
+    <!-- Right Side Panel -->
+    <div id="rightSidePanel" class="side-panel" style="right: 0;">
+        <span class="close-btn" onclick="closeSidePanel('rightSidePanel')">&times;</span>
+        <a href="./rightSidePanel/volunteer.html">Volunteer Opportunities</a>
+        <a href="./rightSidePanel/supportUs.html">Support Us</a>
+        <a href="./rightSidePanel/quiz.html">Quiz</a>
+        <a href="./rightSidePanel/feedbackForm.html">Feedback</a>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="closeAllSidePanels()"></div> <!-- Overlay for background dimming -->
+
+    <script src="script.js"></script>
 </body>
 </html>
-
